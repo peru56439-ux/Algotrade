@@ -1,28 +1,4 @@
-import datetime
-import json
-import sys
-import time
-import random
-import os.path
-from threading import *
-from langdetect import detect  # to filter out anything which is not English
 
-if sys.version_info[0] < 3:
-    import got
-else:
-    import got3 as got
-import \
-    re  # hiermee urls uit tweets gehaald https://stackoverflow.com/questions/11331982/how-to-remove-any-url-within-a-string-in-python
-
-import got3 as got
-
-
-def remove_urls(vTEXT):
-    vTEXT = re.sub(r'(https|http)?:\/\/(\w|\.|\/|\?|\=|\&|\%)*\b', '', vTEXT, flags=re.MULTILINE)
-    return (vTEXT)
-
-
-# tyvm for internet and code sharing; with this the tweet can be cleaned
 
 
 # import string # we dont want eg asian characters in our result; doesnt work
